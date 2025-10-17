@@ -22,6 +22,20 @@ export const DATA_PATH = path.join(ROOT_PATH, "data");
 export const PRIVATE_PATH = path.join(SRC_PATH, "private");
 export const PUBLIC_PATH = path.join(SRC_PATH, "public");
 
+app.use(
+  ["/assets", "/a"],
+  express.static(path.join(PUBLIC_PATH, "assets"))
+);
+app.use("/components", express.static(path.join(PUBLIC_PATH, "components")));
+app.use(
+  ["/scripts", "/js"],
+  express.static(path.join(PUBLIC_PATH, "scripts"))
+);
+app.use(
+  ["/styles", "/css"],
+  express.static(path.join(PUBLIC_PATH, "styles"))
+);
+
 // 404 redirect to home
 app.use((req, res) => {
   res.redirect("/");

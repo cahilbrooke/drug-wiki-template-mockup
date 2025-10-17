@@ -1,0 +1,210 @@
+/* ==============================
+   Global Utility Classes
+   ============================== */
+
+/* --- Margin & Padding Utilities --- */
+.m-0 {
+  margin: 0 !important;
+}
+
+.m-0-auto,
+.margin-0-auto {
+  margin: 0 auto !important;
+}
+
+.mt-0 { margin-top: 0 !important; }
+.mb-0 { margin-bottom: 0 !important; }
+.ml-0 { margin-left: 0 !important; }
+.mr-0 { margin-right: 0 !important; }
+
+.p-0 { padding: 0 !important; }
+.pt-0 { padding-top: 0 !important; }
+.pb-0 { padding-bottom: 0 !important; }
+.pl-0 { padding-left: 0 !important; }
+.pr-0 { padding-right: 0 !important; }
+
+/* --- Width Utilities --- */
+.w-100,
+.width-100 {
+  width: 100% !important;
+}
+
+.w-90,
+.width-90 {
+  width: 90% !important;
+}
+
+.w-75,
+.width-75 {
+  width: 75% !important;
+}
+
+.w-50,
+.width-50 {
+  width: 50% !important;
+}
+
+.w-25,
+.width-25 {
+  width: 25% !important;
+}
+
+.max-w-100 {
+  max-width: 100% !important;
+}
+
+/* --- Height Utilities --- */
+.h-100,
+.height-100 {
+  height: 100% !important;
+}
+
+.h-auto {
+  height: auto !important;
+}
+
+/* --- Display Utilities --- */
+.d-block { display: block !important; }
+.d-inline { display: inline !important; }
+.d-inline-block { display: inline-block !important; }
+.d-flex { display: flex !important; }
+.d-grid { display: grid !important; }
+.d-none { display: none !important; }
+
+/* --- Flexbox Utilities --- */
+.flex-center {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.flex-column {
+  flex-direction: column !important;
+}
+
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+
+.justify-between { justify-content: space-between !important; }
+.justify-center { justify-content: center !important; }
+.align-center { align-items: center !important; }
+
+/* --- Float & Clearfix --- */
+.float-left { float: left !important; }
+.float-right { float: right !important; }
+.float-none { float: none !important; }
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* --- Position Utilities --- */
+.position-relative { position: relative !important; }
+.position-absolute { position: absolute !important; }
+.position-fixed { position: fixed !important; }
+.position-sticky { position: sticky !important; }
+
+/* --- Text Utilities --- */
+.text-center { text-align: center !important; }
+.text-left { text-align: left !important; }
+.text-right { text-align: right !important; }
+.text-uppercase { text-transform: uppercase !important; }
+.text-lowercase { text-transform: lowercase !important; }
+.text-capitalize { text-transform: capitalize !important; }
+
+/* --- Overflow & Visibility --- */
+.overflow-hidden { overflow: hidden !important; }
+.overflow-auto { overflow: auto !important; }
+.visible { visibility: visible !important; }
+.invisible { visibility: hidden !important; }
+
+/* --- Cursor --- */
+.cursor-pointer { cursor: pointer !important; }
+.cursor-default { cursor: default !important; }
+
+/* --- Misc --- */
+.rounded { border-radius: 0.25rem !important; }
+.rounded-full { border-radius: 9999px !important; }
+
+.shadow-sm { box-shadow: 0 1px 2px rgba(0,0,0,0.1) !important; }
+.shadow-md { box-shadow: 0 2px 4px rgba(0,0,0,0.15) !important; }
+.shadow-lg { box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important; }
+
+.hidden { display: none !important; }
+.visible { display: block !important; }
+
+/* --- Centering Helper --- */
+.center-content {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/* ==============================
+   Responsive Visibility Utilities
+   ============================== */
+
+/* Hide on specific devices */
+.desktop-hidden {
+  display: none !important;
+}
+
+@media (max-width: 1023px) {
+  .desktop-hidden {
+    display: block !important;
+  }
+}
+
+.mobile-hidden {
+  display: none !important;
+}
+
+@media (min-width: 768px) {
+  .mobile-hidden {
+    display: block !important;
+  }
+}
+
+.tablet-hidden {
+  display: block !important;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .tablet-hidden {
+    display: none !important;
+  }
+}
+
+/* Show only on specific devices */
+.mobile-only {
+  display: none !important;
+}
+
+@media (max-width: 767px) {
+  .mobile-only {
+    display: block !important;
+  }
+}
+
+.tablet-only {
+  display: none !important;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .tablet-only {
+    display: block !important;
+  }
+}
+
+.desktop-only {
+  display: none !important;
+}
+
+@media (min-width: 1024px) {
+  .desktop-only {
+    display: block !important;
+  }
+}
