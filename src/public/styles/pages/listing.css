@@ -1,0 +1,9 @@
+.heading-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0rem;
+}
+
+.heading-row * {
+  margin: 0;
+}

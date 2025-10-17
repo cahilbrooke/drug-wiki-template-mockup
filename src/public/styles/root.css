@@ -7,6 +7,16 @@ html {
   scroll-behavior: smooth;
 }
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   min-height: 100vh;
   line-height: 1.5;
@@ -96,10 +106,20 @@ table {
   padding-right: 1rem;
 }
 
+/*
 .wrapper {
-  max-width: 1200px;
+  width: 100%;
+  max-width: 800px;
   margin: 0 auto;
 }
+*/
+
+
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 
 /* --- Utility Structural Helpers --- */
 .center-content {
