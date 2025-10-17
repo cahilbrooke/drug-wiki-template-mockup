@@ -5,6 +5,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import morgan from 'morgan';
 import { fileURLToPath } from 'url';
+import router from './public/router.js';
 
 dotenv.config();
 
@@ -35,6 +36,8 @@ app.use(
   ["/styles", "/css"],
   express.static(path.join(PUBLIC_PATH, "styles"))
 );
+
+app.use("/", router);
 
 // 404 redirect to home
 app.use((req, res) => {
