@@ -1,6 +1,10 @@
 .drug-link {
     padding: 1rem;
-    border: 1px solid rgba(1, 1, 1, 1);
+    border-bottom: 1px solid black;
+}
+.drug-link:last-child,
+.drug-link:last-of-type {
+    border-bottom: none;
 }
 .drug-link:hover {
     cursor: pointer;
