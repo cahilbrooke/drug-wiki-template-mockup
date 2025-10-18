@@ -5,3 +5,6 @@
 .drug-link:hover {
     cursor: pointer;
 }
+#synopsis {
+    margin-bottom: 1rem;
+}

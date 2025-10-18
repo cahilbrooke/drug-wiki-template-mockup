@@ -19,42 +19,22 @@ router.get(["/discord", "/discords", "discord-partners", "/discord-partners.html
   }
 );
 
-router.get(["/list/methamphetamine", "/list/methamphetamine.html"],
-  (req, res) => {
-    res.sendFile(path.join(PUBLIC_PATH, "pages", "list", "meth.html"));
+router.get(["/:page", "/:page.html"],
+  (req, res, next) => {
+    console.log(req.params.page);
   }
 );
 
-// ✅ Auto-serve any .html file in /pages
-router.get("*", (req, res, next) => {
-  try {
-    // Normalize and clean the requested path
-    let requestedPath = req.path;
+router.get("/:page", (req, res, next) => {
 
-    // Remove leading/trailing slashes
-    if (requestedPath.startsWith("/")) requestedPath = requestedPath.slice(1);
+  let drugsDir = path.join(PUBLIC_PATH, "pages", "drugs");
 
-    // Default to index.html if path is empty
-    if (!requestedPath) requestedPath = "index";
-
-    // If it doesn’t end with .html, assume it should
-    if (!requestedPath.endsWith(".html")) {
-      requestedPath += ".html";
-    }
-
-    // Construct the full file path
-    const fullPath = path.join(PUBLIC_PATH, "pages", requestedPath);
-
-    // Check if the file exists
-    if (fs.existsSync(fullPath)) {
-      res.sendFile(fullPath);
+    const filePath = path.join(drugsDir, `${req.params.page}.html`);
+    if (fs.existsSync(filePath)) {
+      res.sendFile(filePath);
     } else {
-      // File not found → continue to next middleware (404 redirect)
       next();
     }
-  } catch (err) {
-    next(err);
-  }
-});
+  });
 
 export default router;
