@@ -1,8 +1,16 @@
 .alert {
     padding: 1rem;
+    color: white;
+}
+.alert-danger {
+    background-color: #f44336;
+}
+.alert-success {
+    background-color: #04AA6D;
+}
+.alert-neutral {
+    background-color: #2196F3;
 }
 .alert-warning {
-    background-color: lightcoral;
-    border: 2px solid red;
-    color: white;
+    background-color: #ff9800;
 }
