@@ -1,14 +1,17 @@
-.drug-link {
-    padding: 1rem;
-    border-bottom: 1px solid black;
+#synopsis {
+    margin-bottom: 1rem;
 }
-.drug-link:last-child,
-.drug-link:last-of-type {
-    border-bottom: none;
+#drug-links .drug-link {
+    border-top: none;
+    border: 1px solid black;
+    padding: 1rem;
+}
+#drug-links .drug-link:first-child {
+    border-top: 1px solid black;
 }
 .drug-link:hover {
     cursor: pointer;
 }
-#synopsis {
-    margin-bottom: 1rem;
+.personal-link:hover {
+    cursor: pointer;
 }
