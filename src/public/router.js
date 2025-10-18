@@ -21,20 +21,27 @@ router.get(["/discord", "/discords", "discord-partners", "/discord-partners.html
 
 router.get(["/:page", "/:page.html"],
   (req, res, next) => {
-    console.log(req.params.page);
+    let page = req.params.page;
+    if(!page.endsWith(".html")) {
+      page += ".html";
+    }
+
+    let pages_root = path.join(PUBLIC_PATH, "pages");
+
+    let attempted_path = path.join(pages_root, page);
+
+    if (fs.existsSync(attempted_path)) {
+      res.sendFile(attempted_path);
+    } else {
+      attempted_path = path.join(pages_root, "drugs", page);
+      if (fs.existsSync(attempted_path)) {
+        res.sendFile(attempted_path);
+      } else {
+        next();
+      }
+    }
+
   }
 );
-
-router.get("/:page", (req, res, next) => {
-
-  let drugsDir = path.join(PUBLIC_PATH, "pages", "drugs");
-
-    const filePath = path.join(drugsDir, `${req.params.page}.html`);
-    if (fs.existsSync(filePath)) {
-      res.sendFile(filePath);
-    } else {
-      next();
-    }
-  });
 
 export default router;
