@@ -1,5 +1,6 @@
 function redirect(destination) {
   const currentOrigin = window.location.origin;
+  const currentHostname = window.location.hostname;
   let destURL = new URL(destination, currentOrigin);
 
   const trackedDomains = [
@@ -12,14 +13,10 @@ function redirect(destination) {
     destURL.hostname.includes(domain)
   );
 
-  console.log(isTrackedDomain);
-
-  // Add ?referrer=internal if domain matches tracked list
-  if (isTrackedDomain) {
+  // Only add referrer if destination is a tracked domain AND not same as current
+  if (isTrackedDomain && destURL.hostname !== currentHostname) {
     destURL.searchParams.set("referrer", "internal");
   }
 
-  let target = destURL.toString();
-
-  window.location.href = target;
+  window.location.href = destURL.toString();
 }
