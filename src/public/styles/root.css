@@ -7,7 +7,8 @@ html {
   scroll-behavior: smooth;
 }
 
-html {
+html,
+html * {
   box-sizing: border-box;
 }
 

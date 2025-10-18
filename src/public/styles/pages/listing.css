@@ -13,3 +13,9 @@
 .drug-tag {
     margin-left: 1rem;
 }
+.intake-administration-method-text-block {
+  margin-left: 1rem;
+}
+.intake-administration-method-label {
+  max-width: 200px;
+}
