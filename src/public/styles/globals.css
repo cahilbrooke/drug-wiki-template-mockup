@@ -272,10 +272,16 @@
 .padding-1-rem {
   padding: 1rem;
 }
-.margin-bottom-1-rem {
+
+.m-t-1-rem {
+  margin-top: 1rem;
+}
+.m-b-1-rem {
   margin-bottom: 1rem;
 }
-hr {
+.m-t-2-rem {
   margin-top: 2rem;
+}
+.m-b-2-rem {
   margin-bottom: 2rem;
 }
