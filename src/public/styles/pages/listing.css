@@ -7,3 +7,9 @@
 .heading-row * {
   margin: 0;
 }
+.pseudonym {
+    margin-right: 1rem;
+}
+.drug-tag {
+    margin-left: 1rem;
+}

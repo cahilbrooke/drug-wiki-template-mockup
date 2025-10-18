@@ -7,10 +7,23 @@ import { PUBLIC_PATH } from "../app.js";
 
 const router = express.Router();
 
-// Serve index.html for root route
-router.get("/", (req, res) => {
-  res.sendFile(path.join(PUBLIC_PATH, "pages", "index.html"));
-});
+router.get(["/", "/index", "/index.html"],
+  (req, res) => {
+    res.sendFile(path.join(PUBLIC_PATH, "pages", "index.html"));
+  }
+);
+
+router.get(["/discord", "/discords", "discord-partners", "/discord-partners.html"],
+  (req, res) => {
+    res.sendFile(path.join(PUBLIC_PATH, "pages", "discord-partners.html"));
+  }
+);
+
+router.get(["/list/methamphetamine", "/list/methamphetamine.html"],
+  (req, res) => {
+    res.sendFile(path.join(PUBLIC_PATH, "pages", "list", "meth.html"));
+  }
+);
 
 // ✅ Auto-serve any .html file in /pages
 router.get("*", (req, res, next) => {

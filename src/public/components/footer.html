@@ -1,11 +1,32 @@
 <footer id="footer">
     <div class="wrapper">
-        <div id="footer-domains" class="mobile-hidden">
-            domains
+        <div id="footer-domains-block" class="mobile-hidden">
+            <div id="footer-domains-flexbox">
+                <div id="footer-domains-row">
+                    <div class="footer-domain-block" onclick="redirect('http://www.drug-wiki.com')">
+                        drug-wiki.com
+                    </div>
+                    <div class="footer-domain-block" onclick="redirect('http://www.drug-diary.com')">
+                        drug-diary.com
+                    </div>
+                    <div class="footer-domain-block" onclick="redirect('http://www.substanceguide.com')">
+                        substanceguide.com
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="footer-nav clearfix">
-            <div class="float-left">
-                footer navigation
+        <div id="footer-nav" class="flex">
+            <div class="flex-row items-start">
+                <div class="flex-column footer-nav-column items-start justify-start">
+                    <a href="/safety">Safety</a>
+                    <a href="/contact-us">Contact Us</a>
+                    <a href="/terms">Terms</a>
+                    <a href="/cookie-policy">Cookies Policy</a>
+                </div>
+                <div class="flex-column footer-nav-column items-start justify-start">
+                    <a href="/discord-partners">Discord Partners</a>
+                    <a href="/report-a-mistake">Report a Mistake</a>
+                </div>
             </div>
         </div>
     </div>

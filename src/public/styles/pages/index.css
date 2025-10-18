@@ -1,6 +1,6 @@
-#nav-brand {
+.drug-link {
     padding: 1rem;
 }
-#nav a:hover {
+.drug-link:hover {
     cursor: pointer;
 }

@@ -1,4 +1,5 @@
-import { createElementFromHTML } from "/js/utils.js";
+import { createElementFromHTML } from "/scripts/utils.js";
+import { nav_init } from "/scripts/components/nav.js";
 
 /**
  * Loads and injects /components/head.html into <head>,
@@ -71,6 +72,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       const navHTML = await navResponse.text();
       const navElement = createElementFromHTML(navHTML);
       pageWrapper.insertBefore(navElement, mainElement);
+      nav_init();
     } else {
       console.error('Failed to fetch nav.html:', navResponse.status);
     }

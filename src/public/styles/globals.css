@@ -280,3 +280,70 @@
 .font-monospace {
   font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace !important;
 }
+
+/* ==============================
+   Flexbox Utilities
+   ============================== */
+
+/* --- Base Flex Container --- */
+.flex {
+  display: flex !important;
+}
+
+/* --- Direction --- */
+.flex-row {
+  display: flex !important;
+  flex-direction: row !important;
+}
+
+.flex-column {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* --- Alignment --- */
+.flex-center {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.flex-between {
+  display: flex !important;
+  justify-content: space-between !important;
+}
+
+.flex-around {
+  display: flex !important;
+  justify-content: space-around !important;
+}
+
+.flex-evenly {
+  display: flex !important;
+  justify-content: space-evenly !important;
+}
+
+/* --- Wrapping --- */
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap !important;
+}
+
+/* --- Alignment Helpers --- */
+.items-center { align-items: center !important; }
+.items-start { align-items: flex-start !important; }
+.items-end { align-items: flex-end !important; }
+
+.justify-center { justify-content: center !important; }
+.justify-start { justify-content: flex-start !important; }
+.justify-end { justify-content: flex-end !important; }
+
+.padding-1-rem {
+  padding: 1rem;
+}
+.margin-bottom-1-rem {
+  margin-bottom: 1rem;
+}

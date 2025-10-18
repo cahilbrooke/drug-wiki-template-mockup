@@ -1,0 +1,27 @@
+
+#footer-domains-block {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+#footer-domains-flexbox {
+    width: 100%;               /* full width of parent */
+    overflow: hidden;           /* ✅ cut off edges */
+    display: flex;
+    justify-content: center;
+}
+#footer-domains-row {
+    display: flex;
+}
+.footer-domain-block {
+    padding: 1rem;
+}
+.footer-domain-block:hover {
+    cursor:pointer;
+}
+.footer-nav-column {
+    padding: 1rem;
+}
+.footer-nav-column a:hover {
+    cursor: pointer;
+}
+

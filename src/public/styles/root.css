@@ -7,6 +7,10 @@ html {
   scroll-behavior: smooth;
 }
 
+html * {
+  border: 1px solid black;
+}
+
 html {
   box-sizing: border-box;
 }
