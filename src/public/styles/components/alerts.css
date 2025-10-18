@@ -1,0 +1,8 @@
+.alert {
+    padding: 1rem;
+}
+.alert-warning {
+    background-color: lightcoral;
+    border: 2px solid red;
+    color: white;
+}
